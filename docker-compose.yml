@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  angular-ssr-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000" # Map the SSR server port
+    environment:
+      - NODE_ENV=production
+    restart: always
