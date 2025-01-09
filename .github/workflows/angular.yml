@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - *
   pull_request:
 
 jobs:
@@ -27,7 +28,7 @@ jobs:
 
       # Build the Angular application
       - name: Build Angular app
-        run: npm run build -- --prod
+        run: npm run build
 
   docker-build:
     runs-on: ubuntu-latest
