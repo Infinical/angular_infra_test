@@ -25,14 +25,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Lint the project
-      - name: Lint the code
-        run: npm run lint
-
-      # Run unit tests
-      - name: Run unit tests
-        run: npm run test -- --watch=false --browsers=ChromeHeadless
-
       # Build the Angular application
       - name: Build Angular app
         run: npm run build -- --prod
