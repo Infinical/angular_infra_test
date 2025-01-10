@@ -44,7 +44,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t your-dockerhub-username/kyosk_test .
+        run: docker build -t infinical/kyosk_test .
 
       - name: Push Docker image
-        run: docker push your-dockerhub-username/kyosk_test
+        run: docker push infinical/kyosk_test
