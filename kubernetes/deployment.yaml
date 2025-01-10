@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kyosk-test-app
+  labels:
+    app: kyosk-test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kyosk-test
+  template:
+    metadata:
+      labels:
+        app: kyosk-test
+    spec:
+      containers:
+        - name: kyosk-test
+          image: kyosk-test:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 4000
+          env:
+            - name: NODE_ENV
+              value: "production"
